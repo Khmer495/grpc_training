@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "github.com/Khmer495/grpc_training/proto/calc";
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.training";
+option java_outer_classname = "TrainingProto";
+
+// package名
+package calc;
+
+// 上の４つのパターンをここで指定する。
+service Calc {
+  rpc Sum (SumRequest) returns (SumReply) {}
+}
+
+// リクエストで送る値。「１、２」はそのデータの番号。
+message SumRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+// レスポンスでSumReply送る値
+message  {
+  string message = 1;
+}
